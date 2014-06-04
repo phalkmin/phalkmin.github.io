@@ -1,7 +1,56 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+        <title>DCEzeitor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="gerador.js"></script>
+
+        <style>
+            pre {
+                white-space: pre-wrap;       /* css-3 */
+                white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+                white-space: -pre-wrap;      /* Opera 4-6 */
+                white-space: -o-pre-wrap;    /* Opera 7 */
+                word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            }
+        </style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51646009-1', 'phalkmin.github.io');
+  ga('send', 'pageview');
+
+</script>
+        <script>
+            function ok() {
+                var linhas = document.getElementById('linhas').value;
+                var paragrafos = document.getElementById('paragrafos').value;
+
+                var txt = gerar(paragrafos, linhas);
+
+                document.getElementById('resultado').innerHTML = txt;
+            }
+        </script>
+    </head>
+    <body>
+        <div style="float: left;"><img src="dce.png" alt="Coxinha" title="Coxinha" style="height: 130px; width: 130px"/></div> <h1>DCEzeitor</h1>
+        <div>Número de parágrafos: <input id="paragrafos" type="text" pattern="[0-9]+" size="1"></div>
+        <div>Número de frases por parágrafo: <input id="linhas" type="text" pattern="[0-9]+" size="1">  <input style="margin-left: 10px" type="button" value="Gerar!" onclick="ok()"></div>
+
+
+        <br /><br />
+        <pre id="resultado" style="width: 900px"></pre>
+
+        <div>Copiado descaradamente do <a href="http://homepages.dcc.ufmg.br/~edson/coxinheitor/">Coxinheitor</a>, mas agora na versão reaça.</div>
+    </body>
 </html>
